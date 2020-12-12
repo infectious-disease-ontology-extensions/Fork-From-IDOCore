@@ -149,6 +149,9 @@ Declaration(Class(obo:GO_0002460))
 Declaration(Class(obo:GO_0002468))
 Declaration(Class(obo:GO_0002471))
 Declaration(Class(obo:GO_0002472))
+Declaration(Class(obo:GO_0003674))
+Declaration(Class(obo:GO_0003823))
+Declaration(Class(obo:GO_0005488))
 Declaration(Class(obo:GO_0006909))
 Declaration(Class(obo:GO_0006952))
 Declaration(Class(obo:GO_0006954))
@@ -186,6 +189,7 @@ Declaration(Class(obo:GO_0032635))
 Declaration(Class(obo:GO_0032637))
 Declaration(Class(obo:GO_0032638))
 Declaration(Class(obo:GO_0032991))
+Declaration(Class(obo:GO_0038197))
 Declaration(Class(obo:GO_0042101))
 Declaration(Class(obo:GO_0042571))
 Declaration(Class(obo:GO_0042611))
@@ -476,6 +480,7 @@ Declaration(Class(obo:IDO_0001393))
 Declaration(Class(obo:IDO_0001394))
 Declaration(Class(obo:IDO_0001395))
 Declaration(Class(obo:IDO_0001396))
+Declaration(Class(obo:IDO_0001397))
 Declaration(Class(obo:IDO_0100533))
 Declaration(Class(obo:IDO_0100535))
 Declaration(Class(obo:IDO_0100537))
@@ -522,7 +527,10 @@ Declaration(Class(obo:PR_000000017))
 Declaration(Class(obo:PR_000001004))
 Declaration(Class(obo:PR_000001091))
 Declaration(Class(obo:PR_000001092))
+Declaration(Class(obo:PR_000001096))
 Declaration(Class(obo:PR_000001317))
+Declaration(Class(obo:PR_000001335))
+Declaration(Class(obo:PR_000001362))
 Declaration(Class(obo:PR_000001366))
 Declaration(Class(obo:PR_000001368))
 Declaration(Class(obo:PR_000001369))
@@ -541,12 +549,16 @@ Declaration(Class(obo:PR_000024938))
 Declaration(Class(obo:PR_000024939))
 Declaration(Class(obo:PR_000024990))
 Declaration(Class(obo:PR_000025848))
+Declaration(Class(obo:PR_000028205))
 Declaration(Class(obo:PR_000050032))
 Declaration(Class(obo:RO_0002577))
 Declaration(Class(obo:TRANS_0000000))
 Declaration(Class(obo:TRANS_0000002))
+Declaration(Class(obo:TRANS_0000005))
 Declaration(Class(obo:TRANS_0000007))
 Declaration(Class(obo:TRANS_0000008))
+Declaration(Class(obo:TRANS_0000015))
+Declaration(Class(obo:TRANS_0000028))
 Declaration(Class(obo:UBERON_0000178))
 Declaration(Class(obo:UBERON_0000463))
 Declaration(Class(obo:UBERON_0000467))
@@ -2172,6 +2184,7 @@ AnnotationAssertion(rdfs:comment obo:CL_0000096 "Neutrophils are also capable of
 AnnotationAssertion(rdfs:label obo:CL_0000096 "mature neutrophil")
 SubClassOf(obo:CL_0000096 obo:CL_0000775)
 SubClassOf(obo:CL_0000096 ObjectSomeValuesFrom(obo:RO_0002215 obo:GO_0006909))
+SubClassOf(obo:CL_0000096 ObjectSomeValuesFrom(obo:RO_0002215 obo:GO_0032637))
 
 # Class: obo:CL_0000097 (mast cell)
 
@@ -2710,6 +2723,27 @@ AnnotationAssertion(obo:IAO_0000412 obo:GO_0002472 "http://purl.obolibrary.org/o
 AnnotationAssertion(rdfs:label obo:GO_0002472 "macrophage antigen processing and presentation")
 SubClassOf(obo:GO_0002472 obo:GO_0019882)
 
+# Class: obo:GO_0003674 (molecular_function)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0003674 "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.")
+AnnotationAssertion(obo:IAO_0000412 obo:GO_0003674 "http://purl.obolibrary.org/obo/go.owl")
+AnnotationAssertion(rdfs:label obo:GO_0003674 "molecular_function")
+SubClassOf(obo:GO_0003674 obo:BFO_0000015)
+
+# Class: obo:GO_0003823 (antigen binding)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0003823 "Interacting selectively and non-covalently with an antigen, any substance which is capable of inducing a specific immune response and of reacting with the products of that response, the specific antibody or specifically sensitized T-lymphocytes, or both. Binding may counteract the biological activity of the antigen.")
+AnnotationAssertion(obo:IAO_0000412 obo:GO_0003823 "http://purl.obolibrary.org/obo/go.owl")
+AnnotationAssertion(rdfs:label obo:GO_0003823 "antigen binding")
+SubClassOf(obo:GO_0003823 obo:GO_0005488)
+
+# Class: obo:GO_0005488 (binding)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0005488 "The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule.")
+AnnotationAssertion(obo:IAO_0000412 obo:GO_0005488 "http://purl.obolibrary.org/obo/go.owl")
+AnnotationAssertion(rdfs:label obo:GO_0005488 "binding")
+SubClassOf(obo:GO_0005488 obo:GO_0003674)
+
 # Class: obo:GO_0006909 (phagocytosis)
 
 AnnotationAssertion(obo:IAO_0000115 obo:GO_0006909 "A vesicle-mediated transport process that results in the engulfment of external particulate material by phagocytes and their delivery to the lysosome. The particles are initially contained within phagocytic vacuoles (phagosomes), which then fuse with primary lysosomes to effect digestion of the particles.")
@@ -3039,6 +3073,14 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:GO_0032991 "macromolecular comp
 AnnotationAssertion(rdfs:label obo:GO_0032991 "protein-containing complex"^^xsd:string)
 SubClassOf(obo:GO_0032991 obo:BFO_0000040)
 
+# Class: obo:GO_0038197 (type I interferon receptor complex)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0038197 "A heterodimeric protein complex that binds a type I interferon and transmits the signal across the membrane into the cell. Consists of an alpha subunit (IFNAR1) and a beta subunit (IFNAR2).")
+AnnotationAssertion(obo:IAO_0000412 obo:GO_0038197 "http://purl.obolibrary.org/obo/go.owl")
+AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:GO_0038197 "interferon-alpha/beta receptor complex")
+AnnotationAssertion(rdfs:label obo:GO_0038197 "type I interferon receptor complex")
+SubClassOf(obo:GO_0038197 obo:GO_0032991)
+
 # Class: obo:GO_0042101 (T cell receptor complex)
 
 AnnotationAssertion(obo:IAO_0000115 obo:GO_0042101 "Protein complex that contains a disulfide-linked heterodimer of T cell receptor (TCR) chains, which are members of the immunoglobulin superfamily, and mediates antigen recognition, ultimately resulting in T cell activation. The TCR heterodimer is associated with the CD3 complex, which consists of the nonpolymorphic polypeptides gamma, delta, epsilon, zeta, and, in some cases, eta (an RNA splice variant of zeta) or Fc epsilon chains."^^xsd:string)
@@ -3114,10 +3156,10 @@ SubClassOf(obo:GO_0044406 obo:GO_0008150)
 
 # Class: obo:GO_0044409 (entry into host)
 
-AnnotationAssertion(obo:IAO_0000115 obo:GO_0044409 "Penetration by an organism into the body, tissues, or cells of the host organism."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0044409 "Penetration by an organism, or acellular structure, into the body, tissues, or cells of the host organism."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000412 obo:GO_0044409 obo:go.owl)
 AnnotationAssertion(rdfs:label obo:GO_0044409 "entry into host"^^xsd:string)
-SubClassOf(obo:GO_0044409 obo:GO_0008150)
+EquivalentClasses(obo:GO_0044409 ObjectIntersectionOf(obo:GO_0008150 ObjectSomeValuesFrom(obo:BFO_0000055 obo:IDO_0000438)))
 
 # Class: obo:GO_0045087 (innate immune response)
 
@@ -5964,6 +6006,13 @@ AnnotationAssertion(obo:IAO_0000117 obo:IDO_0001396 "Shane Babcock")
 AnnotationAssertion(rdfs:label obo:IDO_0001396 "immunological memory disposition")
 EquivalentClasses(obo:IDO_0001396 ObjectIntersectionOf(obo:IDO_0000455 ObjectSomeValuesFrom(obo:BFO_0000054 obo:GO_0090716) ObjectSomeValuesFrom(obo:RO_0000052 obo:IDO_0001395)))
 
+# Class: obo:IDO_0001397 (latent infection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IDO_0001397 "Infection for which the infectious agents or structures that are part of the infection are not multiplying in the host.")
+AnnotationAssertion(obo:IAO_0000117 obo:IDO_0001397 "Shane Babcock")
+AnnotationAssertion(rdfs:label obo:IDO_0001397 "latent infection")
+EquivalentClasses(obo:IDO_0001397 ObjectIntersectionOf(obo:IDO_0000586 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:IDO_0000528 ObjectSomeValuesFrom(obo:RO_0000056 obo:IDO_0001385)))))
+
 # Class: obo:IDO_0100533 (infectious disease endemic site)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IDO_0100533 "Site occupied by an organism population bearing an infectious disease endemicity.")
@@ -6344,6 +6393,15 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PR_000001092 "fam:IL-17; IL17")
 AnnotationAssertion(rdfs:label obo:PR_000001092 "interleukin-17")
 SubClassOf(obo:PR_000001092 obo:NCIT_C20464)
 
+# Class: obo:PR_000001096 (Toll-like receptor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PR_000001096 "A protein with a core domain composition consisting of a signal peptide, an extracellular domain with multiple Leucine rich repeat (Pfam:PF13855) domain (LRR), a cysteine-rich region, a single-pass transmembrane domain and a C-terminal cytoplasmic tail containing a TIR domain (Pfam:PF01582).")
+AnnotationAssertion(obo:IAO_0000412 obo:PR_000001096 "http://purl.obolibrary.org/obo/pr.owl")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PR_000001096 "fam:TLR")
+AnnotationAssertion(rdfs:comment obo:PR_000001096 "Category=family.")
+AnnotationAssertion(rdfs:label obo:PR_000001096 "Toll-like receptor")
+SubClassOf(obo:PR_000001096 obo:PR_000000001)
+
 # Class: obo:PR_000001317 (interleukin-7)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PR_000001317 "A protein that is a translation product of the human IL7 gene or a 1:1 ortholog thereof.")
@@ -6351,6 +6409,21 @@ AnnotationAssertion(obo:IAO_0000412 obo:PR_000001317 "http://purl.obolibrary.org
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PR_000001317 "IL-7; IL7")
 AnnotationAssertion(rdfs:label obo:PR_000001317 "interleukin-7")
 SubClassOf(obo:PR_000001317 obo:NCIT_C20464)
+
+# Class: obo:PR_000001335 (class 2 cytokine, IL-10 type)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PR_000001335 "A protein with a core domain architecture consisting of an N-terminal Interleukin 10 (Pfam:PF00726) domain.")
+AnnotationAssertion(obo:IAO_0000412 obo:PR_000001335 "http://purl.obolibrary.org/obo/pr.owl")
+AnnotationAssertion(rdfs:label obo:PR_000001335 "class 2 cytokine, IL-10 type")
+SubClassOf(obo:PR_000001335 obo:NCIT_C20464)
+
+# Class: obo:PR_000001362 (interferon lambda)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PR_000001362 "A type III interferon that is distantly related to type I interferons (IFNs) and the interleukin-10 family. It comprises the translation product of the IL28A, IL28B and IL29 genes. Generally induced by viral infection and exert their antiviral and immunomodulatory activities through a unique receptor complex composed of IFN-lambdaR1 and interleukin 10 receptor 2.")
+AnnotationAssertion(obo:IAO_0000412 obo:PR_000001362 "http://purl.obolibrary.org/obo/pr.owl")
+AnnotationAssertion(rdfs:comment obo:PR_000001362 "Note: Some references consider 'lambda' and 'type III' to be synonyms. This is likely because lambda is the only type III interferon identified. However, the classification criteria for each nomenclature system differ.")
+AnnotationAssertion(rdfs:label obo:PR_000001362 "interferon lambda")
+SubClassOf(obo:PR_000001362 obo:PR_000028205)
 
 # Class: obo:PR_000001366 (interleukin-11)
 
@@ -6501,6 +6574,14 @@ AnnotationAssertion(rdfs:comment obo:PR_000025848 "Category=Family")
 AnnotationAssertion(rdfs:label obo:PR_000025848 "type I interferon")
 SubClassOf(obo:PR_000025848 obo:NCIT_C20464)
 
+# Class: obo:PR_000028205 (type III interferon)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PR_000028205 "A class 2 cytokine, IL-10 type that binds to a specific cell surface receptor complex known as the IFN type III receptor, a heterodimer consisting of IFNLR1 and IL-10R2.")
+AnnotationAssertion(obo:IAO_0000412 obo:PR_000028205 "http://purl.obolibrary.org/obo/pr.owl")
+AnnotationAssertion(rdfs:comment obo:PR_000028205 "Note: Some references consider 'lambda' and 'type III' to be synonyms. This is likely because lambda is the only type III interferon identified. However, the classification criteria for each nomenclature system differ.")
+AnnotationAssertion(rdfs:label obo:PR_000028205 "type III interferon")
+SubClassOf(obo:PR_000028205 obo:PR_000001335)
+
 # Class: obo:PR_000050032 (immunoglobulin complex (human))
 
 AnnotationAssertion(obo:IAO_0000115 obo:PR_000050032 "An immunoglobulin complex whose components are encoded in the genome of human.")
@@ -6535,6 +6616,13 @@ AnnotationAssertion(obo:IAO_0000412 obo:TRANS_0000002 obo:trans.owl)
 AnnotationAssertion(rdfs:label obo:TRANS_0000002 "indirect pathogen transmission process"^^xsd:string)
 SubClassOf(obo:TRANS_0000002 obo:TRANS_0000000)
 
+# Class: obo:TRANS_0000005 (vector-borne pathogen transmission process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:TRANS_0000005 "Indirect pathogen transmission process during which the pathogen is indirectly transferred from a reservoir, source or host via an animate intermediary vector to another host.")
+AnnotationAssertion(obo:IAO_0000412 obo:TRANS_0000005 "http://purl.obolibrary.org/obo/trans.owl")
+AnnotationAssertion(rdfs:label obo:TRANS_0000005 "vector-borne pathogen transmission process")
+SubClassOf(obo:TRANS_0000005 obo:TRANS_0000002)
+
 # Class: obo:TRANS_0000007 (contact pathogen transmission process)
 
 AnnotationAssertion(obo:IAO_0000115 obo:TRANS_0000007 "Pathogen transmission process in which a pathogen is transferred to a host through surface-to-surface contact."@en)
@@ -6550,6 +6638,20 @@ AnnotationAssertion(obo:IAO_0000412 obo:TRANS_0000008 "http://purl.obolibrary.or
 AnnotationAssertion(oboInOwl:term_editor obo:TRANS_0000008 "John Beverley"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:TRANS_0000008 "droplet pathogen transmission process"@en)
 SubClassOf(obo:TRANS_0000008 obo:TRANS_0000002)
+
+# Class: obo:TRANS_0000015 (biologic pathogen transmission process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:TRANS_0000015 "Vector-borne pathogen transmission process during which the pathogen is transported, from a reservoir, source or host to another host, within the vector and undergoes part of it's lifecycle, or replication cycle, in the vector.")
+AnnotationAssertion(obo:IAO_0000412 obo:TRANS_0000015 "http://purl.obolibrary.org/obo/trans.owl")
+AnnotationAssertion(rdfs:label obo:TRANS_0000015 "biologic pathogen transmission process")
+SubClassOf(obo:TRANS_0000015 obo:TRANS_0000005)
+
+# Class: obo:TRANS_0000028 (propagative pathogen transmission process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:TRANS_0000028 "Biological pathogen transmission process during which the pathogen that is ingested with the blood meal undergoes simple multiplication in the body of the vector.")
+AnnotationAssertion(obo:IAO_0000412 obo:TRANS_0000028 "http://purl.obolibrary.org/obo/trans.owl")
+AnnotationAssertion(rdfs:label obo:TRANS_0000028 "propagative pathogen transmission process")
+SubClassOf(obo:TRANS_0000028 obo:TRANS_0000015)
 
 # Class: obo:UBERON_0000178 (blood)
 
